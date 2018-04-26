@@ -1,9 +1,11 @@
 import Mhr from "menhera";
 import Mhrx from "../src";
 
+const store = Mhrx({ name: "Mhrx" });
+
 Mhr.$use({
   _mount: {
-    Mhrx
+    store
   },
   Mhrx: {
     state: {

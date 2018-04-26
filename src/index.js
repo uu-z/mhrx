@@ -1,12 +1,12 @@
 import { observable, observe } from "@nx-js/observer-util";
 
-export default ({ _ }) => ({
-  name: "Mhrx",
+export default ({ name }) => ({ _ }) => ({
+  name,
   states: observable({}),
   mutations: {},
   actions: {},
   _hooks: {
-    Mhrx: {
+    [name]: {
       methods: {
         $({ _key, _val }) {
           this[_key] = _val.bind(this);
@@ -44,7 +44,7 @@ export default ({ _ }) => ({
       }
     }
   },
-  Mhrx: {
+  [name]: {
     methods: {
       commit(_key, payload) {
         let mutation = this.mutations[_key];

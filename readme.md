@@ -14,9 +14,11 @@ $ yarn add menhera mhrx
 import Mhr from "menhera";
 import Mhrx from "mhrx";
 
+const store = Mhrx({ name: "Mhrx" });
+
 Mhr.$use({
   _mount: {
-    Mhrx
+    store
   },
   Mhrx: {
     state: {
