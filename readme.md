@@ -10,6 +10,10 @@ $ yarn add menhera mhrx
 
 ## example
 
+```bash
+$ npx babel-node example/index.js
+```
+
 ```js
 import Mhr from "menhera";
 import Mhrx from "mhrx";
