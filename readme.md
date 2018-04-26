@@ -30,7 +30,10 @@ Mhr.$use({
       }
     },
     actions: {
-      increment({ commit, dispatch }, payload) {
+      async increment({ commit, dispatch }, payload) {
+        await new Promise(res => {
+          setTimeout(res, 2000);
+        });
         commit("increment", payload);
       }
     }

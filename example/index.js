@@ -1,5 +1,6 @@
 import Mhr from "menhera";
 import Mhrx from "../src";
+import { resolve } from "path";
 
 const store = Mhrx({ name: "Mhrx" });
 
@@ -17,7 +18,10 @@ Mhr.$use({
       }
     },
     actions: {
-      increment({ commit, dispatch }, payload) {
+      async increment({ commit, dispatch }, payload) {
+        await new Promise(res => {
+          setTimeout(res, 2000);
+        });
         commit("increment", payload);
       }
     }
