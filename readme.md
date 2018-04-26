@@ -2,6 +2,12 @@
 
 a vuex experimental implementant for menhera
 
+## Install
+
+```bash
+$ yarn add menhera mhrx
+```
+
 ## example
 
 ```js
