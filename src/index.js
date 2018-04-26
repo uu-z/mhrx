@@ -1,10 +1,12 @@
 import { observable, observe } from "@nx-js/observer-util";
 
-export default ({ name }) => ({ _ }) => ({
+export default ({ name, states = {}, mutations = {}, actions = {} }) => ({
+  _
+}) => ({
   name,
-  states: observable({}),
-  mutations: {},
-  actions: {},
+  states: observable(states),
+  mutations,
+  actions,
   _hooks: {
     [name]: {
       methods: {

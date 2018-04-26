@@ -1,6 +1,6 @@
 ## Mhrx
 
-a vuex experimental implementant for menhera
+a vuex experimental implementation for menhera
 
 ## Install
 
